@@ -1,15 +1,29 @@
+# Banking Kata
 
-Your Task
-Your bank is tired of its mainframe COBOL accounting software and they hired both of you for a greenfield project in - what a happy coincidence
+## Kata goal
+Improve TDD skills
 
-your favorite programming language!
-Your task is to show them that your TDD-fu and your new-age programming language can cope with good ole’ COBOL!
+## Requirements
 
-Requirements
-Write a class Account that offers the following methods void deposit(int) void withdraw(int) String printStatement()
+### Iteration 1:
+Write a class Account that offers the following methods void deposit(int) void withdraw(int) String printBalance() 
+Balance can not be negative.
+If a withdraw is made and money is insuficcient, the balance won't be modified, and no messages will be shown.
 
-An example statement would be:
+An example of Balance would be:
 
-Date        Amount  Balance
-24.12.2015   +500      500
-23.8.2016    -100      400
+    Balance: 500
+    
+ ### Iteration 2
+ Add to class Account a method that shows an historical of movements: List<String> printMovements()
+ Every element from the list that is returned, is a new line.
+ If a withdraw is made and money is insuficcient, the movement won't be stored
+
+  
+  An example of Movements would be:
+ 
+  ```
+Movements 
+-250 50
++300 300
+ ```
